@@ -1,0 +1,13 @@
+# Claude / API Keys
+.claude
+
+# Genel güvenlik
+.env
+.env.local
+.env*.local
+
+# Node
+node_modules/
+
+# Build
+dist/

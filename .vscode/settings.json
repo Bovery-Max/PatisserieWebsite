@@ -1,0 +1,7 @@
+{
+  "debug.node.autoAttach": "on",
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "emmet.includeLanguages": {
+    "typescript": "javascriptreact"
+  }
+}
