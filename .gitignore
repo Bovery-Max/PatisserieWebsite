@@ -1,13 +1,25 @@
 # Claude / API Keys
-.claude
+.claude/
 
-# Genel güvenlik
+# Ortam değişkenleri (API key'ler burada da olabilir)
 .env
 .env.local
-.env*.local
+.env.*.local
 
 # Node
 node_modules/
 
-# Build
+# Build çıktısı
 dist/
+dist-ssr/
+
+# VS Code (isteğe bağlı, takım çalışması yoksa ekle)
+.vscode/
+
+# İşletim sistemi
+.DS_Store
+Thumbs.db
+
+# Log dosyaları
+*.log
+npm-debug.log*

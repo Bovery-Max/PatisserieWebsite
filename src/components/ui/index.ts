@@ -1,2 +1,2 @@
 export { Button } from "./Button"
-export { Card, CardImage, CardContent, CardTitle, CardDescription } from "./Card"
+export { Card, CardGlass, CardImage, CardContent, CardTitle, CardDescription, CardBadge } from "./Card"

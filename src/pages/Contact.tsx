@@ -1,7 +1,8 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "../components/ui/Button"
-import { Send, Mail, Phone, MapPin } from "lucide-react"
+import { CardGlass, CardContent } from "../components/ui/Card"
+import { Send, Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -24,154 +25,193 @@ export function Contact() {
   }
 
   return (
-    <div className="min-h-screen pt-20">
-      <section className="py-20 bg-cream">
-        <div className="container mx-auto px-4">
-          <motion.h1
+    <div className="min-h-screen bg-cream">
+      {/* Hero Section */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold text-center text-gray-800 mb-4"
+            className="text-center max-w-3xl mx-auto"
           >
-            Contact <span className="text-primary">Us</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-center text-gray-600 mb-12"
-          >
-            Have questions or want to place a custom order? We'd love to hear from you!
-          </motion.p>
+            <h1 className="text-6xl md:text-7xl font-bold text-text-primary mb-6 font-heading">
+              Contact <span className="text-primary-500">Us</span>
+            </h1>
+            <p className="text-xl text-text-secondary mb-8">
+              Have questions or want to place a custom order? We'd love to hear from you!
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
+      {/* Contact Content */}
+      <section className="pb-24">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+            {/* Contact Info - takes 2 columns */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
+              className="lg:col-span-2 space-y-6"
             >
-              <h2 className="text-3xl font-bold text-gray-800 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-text-primary mb-8 font-heading">Get in Touch</h2>
 
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <MapPin size={24} className="text-primary" />
+              <div className="space-y-6">
+                <motion.div
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="p-3 bg-primary-100 rounded-xl">
+                    <MapPin size={24} className="text-primary-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
-                    <p className="text-gray-600">123 Bakery Lane, Sweet City, SC 12345</p>
+                    <h3 className="font-semibold text-text-primary mb-1">Address</h3>
+                    <p className="text-text-secondary">123 Bakery Lane, Sweet City, SC 12345</p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Phone size={24} className="text-primary" />
+                <motion.div
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="p-3 bg-primary-100 rounded-xl">
+                    <Phone size={24} className="text-primary-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <h3 className="font-semibold text-text-primary mb-1">Phone</h3>
+                    <p className="text-text-secondary">(555) 123-4567</p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    <Mail size={24} className="text-primary" />
+                <motion.div
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex items-start space-x-4"
+                >
+                  <div className="p-3 bg-primary-100 rounded-xl">
+                    <Mail size={24} className="text-primary-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
-                    <p className="text-gray-600">hello@sweethorizon.com</p>
+                    <h3 className="font-semibold text-text-primary mb-1">Email</h3>
+                    <p className="text-text-secondary">hello@sweethorizon.com</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
 
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="font-bold text-gray-800 mb-2">Business Hours</h3>
-                <ul className="space-y-2 text-gray-600">
+              <CardGlass className="p-6">
+                <div className="flex items-start space-x-4 mb-4">
+                  <div className="p-2 bg-primary-100 rounded-lg">
+                    <Clock size={20} className="text-primary-500" />
+                  </div>
+                  <h3 className="font-bold text-text-primary">Business Hours</h3>
+                </div>
+                <ul className="space-y-2 text-text-secondary">
                   <li>Monday - Friday: 7:00 AM - 7:00 PM</li>
                   <li>Saturday: 8:00 AM - 8:00 PM</li>
                   <li>Sunday: 8:00 AM - 6:00 PM</li>
                 </ul>
-              </div>
+              </CardGlass>
             </motion.div>
 
-            {/* Contact Form */}
+            {/* Contact Form - takes 3 columns */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
+              className="lg:col-span-3"
             >
-              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-md">
+              <form onSubmit={handleSubmit} className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl border border-white/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-text-primary font-medium mb-2">
+                      Name
+                    </label>
                     <input
                       type="text"
+                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                      className="w-full px-4 py-3 border border-pastry-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all bg-white/50"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label className="block text-gray-700 font-medium mb-2">Email</label>
+                    <label htmlFor="email" className="block text-text-primary font-medium mb-2">
+                      Email
+                    </label>
                     <input
                       type="email"
+                      id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                      className="w-full px-4 py-3 border border-pastry-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all bg-white/50"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-gray-700 font-medium mb-2">Phone</label>
+                  <label htmlFor="phone" className="block text-text-primary font-medium mb-2">
+                    Phone
+                  </label>
                   <input
                     type="tel"
+                    id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-4 py-3 border border-pastry-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all bg-white/50"
                     placeholder="(555) 123-4567"
                   />
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-gray-700 font-medium mb-2">Subject</label>
+                  <label htmlFor="subject" className="block text-text-primary font-medium mb-2">
+                    Subject
+                  </label>
                   <input
                     type="text"
+                    id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-4 py-3 border border-pastry-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all bg-white/50"
                     placeholder="What's this about?"
                   />
                 </div>
 
                 <div className="mb-6">
-                  <label className="block text-gray-700 font-medium mb-2">Message</label>
+                  <label htmlFor="message" className="block text-text-primary font-medium mb-2">
+                    Message
+                  </label>
                   <textarea
+                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
+                    className="w-full px-4 py-3 border border-pastry-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all resize-none bg-white/50"
                     placeholder="Tell us more..."
                   />
                 </div>
 
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                  <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2">
-                    Send Message
-                    <Send size={20} />
-                  </Button>
-                </motion.div>
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full flex items-center justify-center gap-2 shadow-lg"
+                >
+                  <Send size={20} />
+                  Send Message
+                </Button>
               </form>
             </motion.div>
           </div>

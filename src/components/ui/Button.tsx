@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes, ReactNode } from "react"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode
-  variant?: "primary" | "secondary" | "outline"
+  variant?: "primary" | "secondary" | "outline" | "ghost"
   size?: "sm" | "md" | "lg"
 }
 
@@ -12,14 +12,16 @@ export function Button({
   variant = "primary",
   size = "md",
   className = "",
+  disabled,
   ...props
 }: ButtonProps) {
-  const baseClasses = "font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
+  const baseClasses = "font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
 
   const variants = {
-    primary: "bg-primary text-white hover:bg-primary/90 focus:ring-primary",
-    secondary: "bg-lightGray text-gray-800 hover:bg-gray-200 focus:ring-gray-400",
-    outline: "border-2 border-primary text-primary hover:bg-primary/10 focus:ring-primary",
+    primary: "bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 shadow-lg hover:shadow-primary-500/25",
+    secondary: "bg-pastry-100 text-text-primary hover:bg-pastry-200 focus:ring-pastry-300",
+    outline: "border-2 border-primary-500 text-primary-500 hover:bg-primary-500/10 focus:ring-primary-500",
+    ghost: "text-primary-500 hover:bg-primary-500/10 focus:ring-primary-500",
   }
 
   const sizes = {
@@ -30,9 +32,10 @@ export function Button({
 
   return (
     <motion.button
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={!disabled ? { scale: 1.02, y: -2 } : undefined}
+      whileTap={!disabled ? { scale: 0.98 } : undefined}
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
+      disabled={disabled}
       {...props}
     >
       {children}
