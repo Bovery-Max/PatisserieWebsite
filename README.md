@@ -1,49 +1,74 @@
-# Sweet Horizon Bakery
+# 🍰 Sweet Horizon Bakery
 
-A modern, fully responsive website for a fictional bakery concept built with React, Vite, and Tailwind CSS.
+A modern, responsive bakery website built with React and Vite. Features a clean and elegant design showcasing cakes, desserts, cookies & pastries.
 
-## Tech Stack
+## 🌐 Live Preview
 
-- **React 18** - Component-based UI library
-- **Vite** - Fast build tool and development server
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Smooth animations and transitions
-- **Lucide React** - Beautiful icon library
-- **React Router** - Client-side routing
+> Coming soon
 
-## Color Palette
+## ✨ Features
 
-- **Primary**: `#F69D39` (warm yellowish-orange)
-- **Background**: Light cream `#FEF9F2` and soft gray `#F5F5F5`
-- **Text**: Clean gray tones
+- Responsive design for all screen sizes
+- Multi-page navigation (Home, Cakes, Desserts, Cookies & Pastries, Contact, Location)
+- Fast performance powered by Vite
+- Clean and elegant UI with a warm color palette
 
-## Pages
+## 🛠️ Tech Stack
 
-1. **Home** - Hero section, featured delicacies, customer reviews
-2. **Cakes** - Birthday, wedding, and custom-designed cakes
-3. **Desserts** - Tabbed interface for milk-based and syrup-based/pistachio desserts
-4. **Cookies & Pastries** - Sweet and savory options
-5. **Contact** - Contact form with business hours
-6. **Location** - Map placeholder with address and hours
+- **React** — UI library
+- **Vite** — Build tool & dev server
+- **TypeScript** — Type safety
+- **CSS** — Custom styling
 
-## Getting Started
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/Bovery-Max/PatisserieWebsite.git
+
+# Navigate to the project folder
+cd PatisserieWebsite
+
 # Install dependencies
 npm install
 
-# Start development server
+# Start the development server
 npm run dev
+```
 
-# Build for production
+The app will be running at `http://localhost:5173`
+
+### Build for Production
+
+```bash
 npm run build
 ```
 
-## Features
+## 📁 Project Structure
 
-- Responsive design (mobile & desktop friendly)
-- Smooth animations on page transitions and interactions
-- Mobile hamburger menu with smooth toggle
-- Hover effects on buttons and cards
-- Modern, clean aesthetic with warm bakery tones
+```
+PatisserieWebsite/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.tsx
+│   └── main.tsx
+├── .gitignore
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## 📄 License
+
+This project is for personal/portfolio use.
