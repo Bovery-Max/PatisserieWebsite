@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Instagram, Facebook, Youtube, Mail, Phone, MapPin, CakeSlice } from "lucide-react"
 
@@ -58,12 +59,12 @@ export function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="text-gray-300 hover:text-primary-500 transition-colors duration-300 inline-block cursor-pointer"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
