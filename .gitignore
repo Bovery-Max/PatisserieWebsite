@@ -1,7 +1,7 @@
 # Claude / API Keys
 .claude/
 
-# Ortam değişkenleri (API key'ler burada da olabilir)
+# Ortam değişkenleri (API Key vs.)
 .env
 .env.local
 .env.*.local
@@ -13,7 +13,7 @@ node_modules/
 dist/
 dist-ssr/
 
-# VS Code (isteğe bağlı, takım çalışması yoksa ekle)
+# VS Code 
 .vscode/
 
 # İşletim sistemi
