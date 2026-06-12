@@ -4,7 +4,7 @@ A modern, responsive bakery website built with React and Vite. Features a clean 
 
 ## 🌐 Live Preview
 
-> Coming soon
+> (https://bovery-max.github.io/PatisserieWebsite/)
 
 ## ✨ Features
 
