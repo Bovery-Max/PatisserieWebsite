@@ -18,7 +18,8 @@ A modern, responsive bakery website built with React and Vite. Features a clean 
 - **React** — UI library
 - **Vite** — Build tool & dev server
 - **TypeScript** — Type safety
-- **CSS** — Custom styling
+- **Tailwind CSS** — Utility-first CSS framework
+- **PostCSS** — CSS processing
 
 ## 🚀 Getting Started
 
