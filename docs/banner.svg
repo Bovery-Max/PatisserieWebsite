@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Sweet Horizon Bakery">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#151c35"/></linearGradient>
+<radialGradient id="glow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.45"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/></pattern>
+</defs>
+<rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+<rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+<circle cx="1060" cy="40" r="300" fill="url(#glow)"/>
+<circle cx="120" cy="330" r="200" fill="url(#glow)" opacity="0.6"/>
+<rect x="0" y="0" width="6" height="320" rx="3" fill="#f59e0b"/>
+<rect x="64" y="92" width="72" height="72" rx="18" fill="#f59e0b"/>
+<text x="100" y="140" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#0b1020" text-anchor="middle">SH</text>
+<text x="160" y="138" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Sweet Horizon Bakery</text>
+<text x="160" y="180" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="21" fill="#aab3cc">Multi-page bakery website with a warm, animated UI</text>
+<rect x="160" y="222" width="70" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#f59e0b" stroke-opacity="0.55"/><text x="195.0" y="244" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#e3e8f5" text-anchor="middle">React</text>
+<rect x="242" y="222" width="112" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#f59e0b" stroke-opacity="0.55"/><text x="298.0" y="244" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#e3e8f5" text-anchor="middle">TypeScript</text>
+<rect x="366" y="222" width="61" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#f59e0b" stroke-opacity="0.55"/><text x="396.5" y="244" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#e3e8f5" text-anchor="middle">Vite</text>
+<rect x="439" y="222" width="95" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#f59e0b" stroke-opacity="0.55"/><text x="486.5" y="244" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#e3e8f5" text-anchor="middle">Tailwind</text>
+<rect x="546" y="222" width="137" height="34" rx="17" fill="#ffffff" fill-opacity="0.06" stroke="#f59e0b" stroke-opacity="0.55"/><text x="614.5" y="244" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" fill="#e3e8f5" text-anchor="middle">Framer Motion</text>
+<text x="1160" y="294" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" fill="#6f7a99" text-anchor="end">github.com/Bovery-Max</text>
+</svg>
